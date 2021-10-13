@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Spyder Editor
 
@@ -18,6 +17,7 @@ with open("synergy_logistics_database.csv","r") as archivo:
         lista_datos.append(registro)       
 
     
+
 #Opción 1) Rutas de importación y exportación
 #creacción de función para conteo de importaciones-exportaciones por ruta
 def rutas_exp_import(direccion):
@@ -50,7 +50,7 @@ for i in range(0,10):
     
 importaciones_por_ruta=rutas_exp_import("Imports") #correr la función para importaciones
 #imprimir solo las 10 rutas con mayores importaciones
-print("Las 10 rutas [origen=importador, destino=exportador] con mayores importaciones son: ")
+print("Las 10 rutas [origen=exportador, destino=importador] con mayores importaciones son: ")
 for i in range(0,10):
     print(importaciones_por_ruta[i])
  
@@ -177,6 +177,6 @@ porcentaje_paises=porcentajes_pais("Exports",0.8) #corre la función
 print(porcentaje_paises) #imprime las exportaciónes que aportan el %
 
 
-print("Los países que aportan el 80% del valor de las importaciones son: \n [Imports,origen(país que importa),# Movimientos, valor total,% de aportación por país, %acumulado]")       
+print("Los países que aportan el 80% del valor de las importaciones son: \n [Imports,origen(país que exporta),# Movimientos, valor total,% de aportación por país, %acumulado]")       
 porcentaje_paises=porcentajes_pais("Imports",0.8)  #corre la función     
 print(porcentaje_paises) #imprime las importaciónes que aportan el %
